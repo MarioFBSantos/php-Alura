@@ -20,6 +20,8 @@ $contasCorrentes = [
 $contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'], 500);
 $contasCorrentes['123.256.789-12'] = depositar($contasCorrentes['123.256.789-12'], 90000);
 
+unset($contasCorrentes['123.456.789-11']);
+
 echo PHP_EOL;
 
 formatarUpperCase($contasCorrentes['123.256.789-12']);
