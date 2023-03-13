@@ -13,11 +13,17 @@ function sacar(array $conta, float $valor): array{
     }
     else{
         $conta['saldo'] -= $valor;
-        echo "SAQUE -> " . $conta['saldo'] . " foram removidos " . $valor;
+        // echo "SAQUE -> " . $conta['saldo'] . " foram removidos " . $valor;
         return $conta;
     }
 }
 
 function formatarUpperCase(array &$conta){
     $conta['titular'] = strtoupper($conta['titular']);
+}
+
+function exibeConta(array $conta)
+{
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+    echo "<li>Titular: $titular. Saldo: $saldo</li>";
 }
